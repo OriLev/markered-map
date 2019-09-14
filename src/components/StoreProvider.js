@@ -5,10 +5,9 @@ import PropTypes from 'prop-types';
 // this component dictates which stores can be injected into app components
 const StoreProvider = ({ store, children }) => (
   <MobxProvider
-    view={store.view}
-    router={store.router}
+    // view={store.view}
     data={store.data}
-    imgAddition={store.imgAddition}
+    // markerAddition={store.markerAddition}
   >
     {children}
   </MobxProvider>
