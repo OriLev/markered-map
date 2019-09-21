@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4d7485f2bf5edc43edb35e9171ab8c16",
+    "revision": "bbe3a7e6cc218b5ae7e91e52af6c0c94",
     "url": "/markered-map/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/markered-map/static/css/2.711045af.chunk.css"
   },
   {
-    "revision": "4bb3593712657dcf4568",
+    "revision": "904aa666d2129e658861",
     "url": "/markered-map/static/css/main.9e855d66.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/markered-map/static/js/2.88701e8a.chunk.js"
   },
   {
-    "revision": "4bb3593712657dcf4568",
-    "url": "/markered-map/static/js/main.cb0d6399.chunk.js"
+    "revision": "904aa666d2129e658861",
+    "url": "/markered-map/static/js/main.b5299480.chunk.js"
   },
   {
     "revision": "d85f14b7ada10cdc2e51",
