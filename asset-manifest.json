@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/markered-map/static/css/main.9e855d66.chunk.css",
+    "main.js": "/markered-map/static/js/main.e20d2910.chunk.js",
+    "main.js.map": "/markered-map/static/js/main.e20d2910.chunk.js.map",
+    "runtime~main.js": "/markered-map/static/js/runtime~main.5a9c6bd4.js",
+    "runtime~main.js.map": "/markered-map/static/js/runtime~main.5a9c6bd4.js.map",
+    "static/css/2.711045af.chunk.css": "/markered-map/static/css/2.711045af.chunk.css",
+    "static/js/2.2357d942.chunk.js": "/markered-map/static/js/2.2357d942.chunk.js",
+    "static/js/2.2357d942.chunk.js.map": "/markered-map/static/js/2.2357d942.chunk.js.map",
+    "index.html": "/markered-map/index.html",
+    "precache-manifest.8fedd5ff3b1db836fe2e71b4198a8f19.js": "/markered-map/precache-manifest.8fedd5ff3b1db836fe2e71b4198a8f19.js",
+    "service-worker.js": "/markered-map/service-worker.js",
+    "static/css/2.711045af.chunk.css.map": "/markered-map/static/css/2.711045af.chunk.css.map",
+    "static/css/main.9e855d66.chunk.css.map": "/markered-map/static/css/main.9e855d66.chunk.css.map"
+  }
+}
