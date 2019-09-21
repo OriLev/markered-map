@@ -5,11 +5,13 @@ import {
 class DataStore {
   constructor(appStore) {
     this.appStore = appStore;
+    this.markerIdCounter = 0;
   }
   // OBSERVABLES................................................................
 
   markers = [
     {
+      id: 0,
       name: 'point-1',
       lon: 32.092446,
       lat: 34.782679,
@@ -39,25 +41,38 @@ class DataStore {
   }
 
   get polyLinesLocation() {
-    return [
-      ...this.markers.map(marker => ([marker.lon, marker.lat])),
-      [this.markers[0].lon, this.markers[0].lat],
-    ];
+    if (this.markers.length > 0) {
+      return [
+        ...this.markers.map(marker => ([marker.lon, marker.lat])),
+        [this.markers[0].lon, this.markers[0].lat],
+      ];
+    }
+    return [];
   }
 
-  // // ACTIONS....................................................................
-  // addMarker = (markerData) => {
-  //   const { name, lon, lat } = markerData;
-  //   if (name) {
-  //     console.log('still in construction');
-  //   } else {
-  //     this.markers.push({
-  //       lon,
-  //       lat,
-  //       name: `${lon}-${lat}`,
-  //     });
-  //   }
-  // };
+  // ACTIONS....................................................................
+  addMarker = (markerData) => {
+    const { name, lon, lat } = markerData;
+    const partData = { lon, lat, id: this.markerIdCounter };
+    this.markerIdCounter += 1;
+    let newMarker;
+    if (!name.trim()) {
+      newMarker = {
+        ...partData,
+        name: `${lon}-${lat}`,
+      };
+    } else {
+      newMarker = { ...partData, name };
+    }
+    this.markers.push(newMarker);
+  };
+
+  deleteMarker = (id) => {
+    const markerIndex = this.findMarkerIndex(id);
+    this.markers.splice(markerIndex, 1);
+  }
+
+  findMarkerIndex = id => this.markers.findIndex(element => element.id === id);
 }
 
 decorate(DataStore, {
@@ -65,6 +80,7 @@ decorate(DataStore, {
   center: computed,
   polyLinesLocation: computed,
   addMarker: action,
+  deleteMarker: action,
 });
 
 export default DataStore;
