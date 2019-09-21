@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { observer, inject } from 'mobx-react';
 import { withStyles } from '@material-ui/core/styles';
-// import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import MapDisplay from '../MapDisplay';
+import MarkersDashBoard from '../MarkersDashboard';
 
 const styles = theme => ({
   root: {
@@ -22,33 +22,12 @@ const styles = theme => ({
   container: {
     listStyle: 'none',
   },
-  markersDash: {
-    width: '35%',
-    color: 'black',
-  },
 });
-
-const MarkersDashBoard = ({ className, data }) => (
-  <div className={className}>
-    <ul>
-      {data.markers.map(marker => (
-        <li>
-          <span>{`lon: ${marker.lon} lat: ${marker.lat} name: ${marker.name}`}</span>
-        </li>
-      ))}
-    </ul>
-  </div>
-);
-
-MarkersDashBoard.propTypes = {
-  className: PropTypes.string.isRequired,
-  data: PropTypes.shape({}).isRequired,
-};
 
 const Body = ({ classes, data }) => (
   <div className={classes.root}>
     <Paper className={classes.paper}>
-      <MarkersDashBoard className={classes.markersDash} data={data} />
+      <MarkersDashBoard data={data} />
       <MapDisplay />
     </Paper>
   </div>
