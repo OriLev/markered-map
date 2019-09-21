@@ -2,10 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { observer, inject } from 'mobx-react';
 import { withStyles } from '@material-ui/core/styles';
-// import Grid from '@material-ui/core/Grid';
 import { ReactBingmaps } from 'react-bingmaps';
-// import Paper from '@material-ui/core/Paper';
-// import BookCard from '../BookCard';
 
 const styles = () => ({
   root: {
@@ -42,7 +39,7 @@ const MapDisplay = ({ classes, data }) => (
 
 MapDisplay.propTypes = {
   classes: PropTypes.shape({}).isRequired,
-  data: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
+  data: PropTypes.shape({}).isRequired,
 };
 
 export default inject('data')(withStyles(styles)(observer(MapDisplay)));
