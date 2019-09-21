@@ -27,12 +27,6 @@ const FormTypeRadioButton = ({ classes, view = { currentView: 'lon-lat' } }) => 
         <RadioGroup aria-label="gender" name="gender1" value={currentView} onChange={handleChange} row>
           <FormControlLabel value="lon-lat" control={<Radio />} label="Lon-Lat" />
           <FormControlLabel value="location" control={<Radio />} label="Location search" />
-          <FormControlLabel
-            value="disabled"
-            disabled
-            control={<Radio />}
-            label="(Disabled option)"
-          />
         </RadioGroup>
       </FormControl>
     </div>
